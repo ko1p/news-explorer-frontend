@@ -5,7 +5,7 @@
 
 Проект по поиску и сохранению избраных новостей.
 
-Ссылка: [NewsExplorer](https://ko1p.github.io/news-explorer-frontend/ "NewsExplorer")
+Ссылка: [NewsExplorer](https://ko1p.github.io/news-explorer-frontend/index.html "NewsExplorer")
 
 Текущая версия: v.0.0.1
 
