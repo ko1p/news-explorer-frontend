@@ -1,0 +1,37 @@
+@media screen and (min-width: 1330px) {
+  .btn__delete:hover ~ .btn__notice {
+    display: block;
+  }
+}
+
+.btn__delete {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background: #FFF;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-image: url(../../../images/delete.svg);
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+
+.btn__delete:hover {
+  background-image: url(../../../images/delete-hover.svg);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.btn__delete {
+    top: 8px;
+    right: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

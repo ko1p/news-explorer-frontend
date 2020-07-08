@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.page {
+    max-width: 1023px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.page {
+    height: 767px;
+	}
+}

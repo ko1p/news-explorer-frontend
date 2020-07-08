@@ -1,0 +1,18 @@
+.article__link {
+  min-height: 576px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.article__link {
+    min-height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.article__link {
+    min-height: 440px;
+  }
+}

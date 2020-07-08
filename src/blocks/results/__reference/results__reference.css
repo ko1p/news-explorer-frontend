@@ -1,0 +1,25 @@
+.results__reference {
+  font-family: 'Roboto';
+  margin: 40px 0 0 104px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.results__reference {
+    margin: 24px 0 0 40px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.results__reference {
+    margin: 8px 0 0 16px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+}

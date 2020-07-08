@@ -1,0 +1,32 @@
+.article__text {
+  margin: 16px 24px 0 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.article__text {
+    margin: 12px 15px 0 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.article__text {
+    margin: 10px 16px 0 16px;
+    font-size: 16px;
+    line-height: 22px;
+    -webkit-line-clamp: 3;
+  }
+}
+

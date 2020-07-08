@@ -1,0 +1,5 @@
+@media screen and (min-width: 1260px) {
+	.btn__save_not-login:hover ~ .btn__notice {
+    display: block;
+  }
+}

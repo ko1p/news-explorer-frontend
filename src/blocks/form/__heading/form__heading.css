@@ -1,0 +1,16 @@
+.form__heading {
+  max-width: 315px;
+  margin: 0 0 25px 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 767px) {
+	.form__heading {
+    margin: 0 0 15px 0;
+  }
+}

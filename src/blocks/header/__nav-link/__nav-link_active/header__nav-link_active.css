@@ -1,0 +1,18 @@
+.header__nav-link_active {
+  padding: 5px 0 0 0;
+}
+
+.header__nav-link_active::after {
+  content: '';
+  position: relative;
+  display: block;
+  border: 2px solid;
+  top: 23px;
+  display: block;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.header__nav-link_active::after {
+    top: 20px;
+  }
+}

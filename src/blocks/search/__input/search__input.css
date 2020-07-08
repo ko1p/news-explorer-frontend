@@ -1,0 +1,35 @@
+.search__imput {
+  width: 80%;
+  height: 64px;
+  background: #FFF;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  padding: 21px 0 21px 24px;
+  outline: none;
+}
+
+.search__imput:focus {
+  background-color: #F1FCFE;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.search__imput {
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.search__imput {
+    padding: 0 0 0 15px;
+    width: 100%;
+    height: 56px;
+  }
+}

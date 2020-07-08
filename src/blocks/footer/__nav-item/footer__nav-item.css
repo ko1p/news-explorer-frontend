@@ -1,0 +1,25 @@
+.footer__nav-item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #1A1B22;
+}
+
+.footer__nav-item:nth-child(1) {
+  margin-right: 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.footer__nav-item:nth-child(1) {
+    margin-right: 17px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.footer__nav-item:nth-child(2) {
+    margin: 24px 0 0 0;
+  }
+}

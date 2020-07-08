@@ -1,0 +1,26 @@
+@import url(./__header/mobile-menu__header.css);
+@import url(./__logo/mobile-menu__logo.css);
+@import url(./__close/mobile-menu__close.css);
+@import url(./__links/mobile-menu__links.css);
+@import url(./__link/mobile-menu__link.css);
+@import url(./__btn/mobile-menu__btn.css);
+
+.mobile-menu {
+  min-width: 320px;
+  width: 100%;
+  background: #1A1B22;
+  height: 286px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+@media screen and (max-width: 767px) {
+	.mobile-menu {
+    min-width: 320px;
+    width: 100%;
+    background: #1A1B22;
+    height: 286px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}

@@ -1,0 +1,25 @@
+.btn.btn__auth {
+  cursor: pointer;
+  width: 175px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.btn.btn__auth {
+    width: 152px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.btn.btn__auth {
+    display: none;
+  }
+}

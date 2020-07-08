@@ -1,0 +1,14 @@
+@media screen and (min-width: 1260px) {
+	.btn__save_marked {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.btn__save.btn__save_marked {
+  background-image: url(../../../../images/bookmark-marked.svg);
+}
+
+.btn__save.btn__save_marked:hover {
+  background-image: url(../../../../images/bookmark-marked.svg);
+}

@@ -1,0 +1,27 @@
+.results__heading {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  margin: 80px 0 0 104px;
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.results__heading {
+    font-size: 30px;
+    line-height: 34px;
+    margin: 40px 0 0 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.results__heading {
+    width: 80%;
+    font-size: 30px;
+    line-height: 34px;
+    margin: 32px 0 0 16px;
+  }
+}

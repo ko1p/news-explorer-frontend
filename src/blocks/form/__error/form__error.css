@@ -1,0 +1,15 @@
+@import url(./_active/form__error_active.css);
+@import url(./_email/form__error_email.css);
+@import url(./_password/form__error_password.css);
+@import url(./_name/form__error_name.css);
+@import url(./_server/form__error_server.css);
+
+.form__error {
+  display: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+}

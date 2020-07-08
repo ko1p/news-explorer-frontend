@@ -1,0 +1,38 @@
+@import url(./_marked/btn__save_marked.css);
+@import url(./_not-login/btn__save_not-login.css);
+
+.btn__save {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background: #FFF;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-image: url(../../../images/bookmark.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+
+.btn__save:hover {
+  background-image: url(../../../images/bookmark-hover.svg);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.btn__save {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.btn__save {
+    top: 16px;
+    right: 16px;
+  }
+}

@@ -1,0 +1,30 @@
+@import url(./_is-opened/popup_is-opened.css);
+@import url(./__container/popup__container.css);
+@import url(./__close/popup__close.css);
+@import url(./__success/popup__success.css);
+@import url(./__heading/popup__heading.css);
+@import url(./__signup/popup__signup.css);
+@import url(./__signin/popup__signin.css);
+@import url(./__mobile-menu/popup__mobile-menu.css);
+
+.popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+
+@media screen and (max-width: 767px) {
+	.popup {
+    top: 56px;
+    align-items: normal;
+    height: calc(100% - 56px);
+  }
+}

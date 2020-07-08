@@ -1,0 +1,28 @@
+.article__source {
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  bottom: 24px;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.article__source {
+    left: 16px;
+    bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.article__source {
+    left: 16px;
+    bottom: 16px;
+  }
+}

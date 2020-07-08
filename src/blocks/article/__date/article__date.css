@@ -1,0 +1,21 @@
+.article__date {
+  margin: 20px 0 0 20px;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.article__date {
+    margin: 16px 0 0 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.article__date {
+    margin: 16px 0 0 16px;
+  }
+}
