@@ -9,11 +9,12 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     index: './src/js/index.js',
-    articles: './src/js/articles.js'
+    articles: './src/js/articles/index.js'
   },
+  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './js/[name].[chunkhash].js'
+    filename: './js/[name]/index.[chunkhash].js'
   },
   module: {
     rules: [{

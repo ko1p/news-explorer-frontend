@@ -15,7 +15,7 @@
   line-height: 24px;
   align-items: center;
   text-align: center;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .search__btn:hover {
@@ -26,6 +26,11 @@
 .search__btn:active {
   background: #2A65CC;
   box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}
+
+.search__btn:disabled {
+  background: #E6E8EB;
+  color: #B6BCBF;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {

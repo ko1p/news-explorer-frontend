@@ -1,0 +1,26 @@
+export const popup = document.querySelector('.popup');
+export const authBtn = document.querySelector('.btn__auth');
+export const formLinkSignup = document.querySelector('.form__link-signup');
+export const formLinkSignin = document.querySelector('.form__link-signin');
+export const formLinkSuccess = document.querySelector('.form__link-success');
+export const signinPopup = document.querySelector('.template__signin');
+export const mobileMenuOpen = document.querySelector('.btn__mobile-menu');
+export const mobileMenuClose = document.querySelector('.mobile-menu__close');
+export const mobileMenu = document.querySelector('.popup__mobile-menu');
+export const mobileMenuAuthBtn = document.querySelector('.mobile-menu__btn-auth');
+export const signupPopup = document.querySelector('.template__signup');
+export const successpPopup = document.querySelector('.template__success');
+export const signinForm = document.querySelector('.form__signin');
+export const signupForm = document.querySelector('.form__signup');
+export const searchForm = document.querySelector('.search__form');
+export const searchBtn = document.querySelector('.search__btn');
+export const resultsSection = document.querySelector('.results');
+export const articlesList = document.querySelector('.articles-list');
+export const articleTemplate = document.querySelector('.template__article');
+export const resultsTitle = document.querySelector('.results__title');
+export const resultKeywords = document.querySelector('.results__keywords');
+export const noArticlesBlock = document.querySelector('.no-articles');
+export const btnMoreArticles = document.querySelector('.results__more-btn');
+
+export const MONTHS = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+export const RENDER_AT_A_TIME = 3; // Количество карточек для отображения по клику на "Показать ещё"

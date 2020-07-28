@@ -4,5 +4,12 @@
     "linebreak-style": 0,
     "no-console": "off",
     "no-underscore-dangle": ["error", { "allow": ["_id"] }]
- }
+ },
+ "globals": {
+  "localStorage": true,
+  "document": true,
+  "window": true,
+  "event": true,
+  "fetch": true
+}
 }

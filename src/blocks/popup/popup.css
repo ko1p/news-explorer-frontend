@@ -23,8 +23,6 @@
 
 @media screen and (max-width: 767px) {
 	.popup {
-    top: 56px;
     align-items: normal;
-    height: calc(100% - 56px);
   }
 }

@@ -1,6 +1,7 @@
 .form__error_server {
   display: block;
-  left: 125px;
+  width: 80%;
+  /* left: 125px; */
   bottom: 135px;
   position: absolute;
   text-align: center;

@@ -16,6 +16,7 @@
 @import url(../blocks/author/author.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/mobile-menu/mobile-menu.css);
+@import url(../blocks/template/template.css);
 
 body {
   display: flex;

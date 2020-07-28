@@ -1,4 +1,7 @@
+@import url("./_active/results__more-btn_active.css");
+
 .results__more-btn {
+  display: none;
   width: 288px;
   height: 64px;
   font-family: 'Roboto';

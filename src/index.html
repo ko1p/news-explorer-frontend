@@ -16,12 +16,12 @@
     <section class="header-cover">
         <!-- Хедер -->
         <header class="header">
-          <div class="header__container">
+          <div class="header__container header__container_black">
             <p class="header__logo">NewsExplorer</p>
             <nav class="header__navigation">
               <a class="header__nav-link header__nav-link_active" href="./index.html">Главная</a>
               <a class="header__nav-link header__nav-link_not-active header__nav-link_hide" href="./articles.html">Сохраненные статьи</a>
-              <button class="btn btn__auth header__nav-link ">Авторизоваться</button>
+              <button class="btn btn__auth header__nav-link">Авторизоваться</button>
               <button class="btn btn__logout header__nav-link header__nav-logout header__nav-link_hide">Грета<svg class="header__logout-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="currentColor"/>
                 </svg></button>
@@ -38,7 +38,7 @@
         <div class="search">
           <h1 class="search__heading">Что в мире творится?</h1>
           <p class="search__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
-          <form class="search__form" action="http://httpbin.org/post" method="POST">
+          <form class="search__form">
             <input class="search__imput" name="searchInput" type="text" placeholder="Введите тему новости" required minlength="1">
             <button class="btn search__btn" type="submit">Искать</button>
           </form>
@@ -56,68 +56,73 @@
       <p class="no-articles__text">К сожалению по вашему запросу ничего не найдено.</p>
     </div>
     <!-- Попапы / открытие добавлением класса popup_is-opened -->
-      <!-- Попап входа -->
-    <div class="popup popup__signin ">
-      <div class="popup__container">
-        <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
-        <form class="form__signin" name="signin" action="http://httpbin.org/post" method="POST">
-          <h3 class="form__heading">Вход</h3>
-          <fieldset class="form__fieldset">
-            <div class="form__field">
-              <label class="form__label" for="signin__email">Email</label>
-              <input class="form__input" type="email" name="email" id="signin__email" pattern="[a-z0-9-_]+[@]{1}\w{2,}\.\w{2,}" placeholder="Введите почту" required />
-              <span class="form__error form__error_email form__error_active">Неправильный формат email</span>
-            </div>
-            <div class="form__field">
-              <label class="form__label" for="signin__password">Пароль</label>
-              <input class="form__input" type="password" name="password" id="signin__password" placeholder="Введите пароль" required minlength="8"/>
-              <span class="form__error form__error_email">Ошибка пароля</span>
-            </div>
-            <button class="btn form__btn" type="submit">Войти</button>
-          </fieldset>
-          <p class="form__reference">или <span class="form__link">Зарегистрироваться</span></p>
-        </form>
+      <!-- Попап -->
+    <div class="popup"></div>
+    <div class="popup-content">
+      <div class="template__signin template">
+        <div class="popup__container">
+          <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
+          <form class="form__signin" name="signin">
+            <h3 class="form__heading">Вход</h3>
+            <fieldset class="form__fieldset">
+              <div class="form__field">
+                <label class="form__label" for="signin__email">Email</label>
+                <input class="form__input" type="email" name="email" id="signin__email" pattern="[a-z0-9-_]+[@]{1}\w{2,}\.\w{2,}" placeholder="Введите почту" required />
+                <span class="form__error form__error_email">Неправильный формат email</span>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="signin__password">Пароль</label>
+                <input class="form__input" type="password" name="password" id="signin__password" placeholder="Введите пароль" required minlength="8"/>
+                <span class="form__error form__error_email">Пароль должен быть длинее из 7 символов</span>
+              </div>
+              <span class="form__error form__error_server ">Ошибка с сервера</span>
+              <button class="btn form__btn" type="submit" disabled>Войти</button>
+            </fieldset>
+            <p class="form__reference">или <span class="form__link form__link-signup">Зарегистрироваться</span></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="template__signup template">
+        <div class="popup__container">
+          <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
+          <form class="form__signup" name="signin" action="http://httpbin.org/post" method="POST">
+            <h3 class="form__heading">Регистрация</h3>
+            <fieldset class="form__fieldset">
+              <div class="form__field">
+                <label class="form__label" for="signup__email">Email</label>
+                <input class="form__input" type="email" name="email" id="signup__email" pattern="[a-z0-9-_]+[@]{1}\w{2,}\.\w{2,}" placeholder="Введите почту" required />
+                <span class="form__error form__error_email ">Неправильный формат email</span>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="signup__password">Пароль</label>
+                <input class="form__input" type="password" name="password" id="signup__password" placeholder="Введите пароль" required minlength="8"/>
+                <span class="form__error form__error_email">Пароль должен быть длинее из 7 символов</span>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="signup__name">Имя</label>
+                <input class="form__input" type="text" name="name" id="signup__name" placeholder="Введите своё имя" required minlength="2"/>
+                <span class="form__error form__error_name">Имя должно быть длинее 1 символа</span>
+              </div>
+              <span class="form__error form__error_server">Ошибка с сервера</span>
+              <button class="btn form__btn" type="submit" disabled>Зарегистрироваться</button>
+            </fieldset>
+            <p class="form__reference">или <span class="form__link form__link-signin">Войти</span></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="template__success template">
+        <div class="popup__container">
+          <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
+          <h3 class="popup__heading">Пользователь успешно зарегистрирован</h3>
+          <span class="form__link form__link-success">Выполнить вход</span>
+        </div>
       </div>
     </div>
-      <!-- Попап регистрации -->
-    <div class="popup popup__signup">
-      <div class="popup__container">
-        <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
-        <form class="form__signin" name="signin" action="http://httpbin.org/post" method="POST">
-          <h3 class="form__heading">Регистрация</h3>
-          <fieldset class="form__fieldset">
-            <div class="form__field">
-              <label class="form__label" for="signup__email">Email</label>
-              <input class="form__input" type="email" name="email" id="signup__email" pattern="[a-z0-9-_]+[@]{1}\w{2,}\.\w{2,}" placeholder="Введите почту" required />
-              <span class="form__error form__error_email form__error_active">Неправильный формат email</span>
-            </div>
-            <div class="form__field">
-              <label class="form__label" for="signup__password">Пароль</label>
-              <input class="form__input" type="password" name="password" id="signup__password" placeholder="Введите пароль" required minlength="8"/>
-              <span class="form__error form__error_email">Ошибка пароля</span>
-            </div>
-            <div class="form__field">
-              <label class="form__label" for="signup__name">Имя</label>
-              <input class="form__input" type="text" name="name" id="signup__name" placeholder="Введите своё имя" required minlength="8"/>
-              <span class="form__error form__error_name">Ошибка имени</span>
-            </div>
-            <span class="form__error form__error_server form__error_active">Такой пользователь уже есть</span>
-            <button class="btn form__btn" type="submit">Зарегистрироваться</button>
-          </fieldset>
-          <p class="form__reference">или <span class="form__link">Войти</span></p>
-        </form>
-      </div>
-    </div>
-      <!-- Успешная регистрация -->
-    <div class="popup popup__success ">
-      <div class="popup__container">
-        <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
-        <h3 class="popup__heading">Пользователь успешно зарегистрирован</h3>
-        <span class="form__link form__link_signin">Выполнить вход</span>
-      </div>
-    </div>
+
     <!-- Попап мобильное-меню. Открытие popup_is-opened -->
-    <div class="popup popup__mobile-menu" >
+    <div class="popup popup__mobile-menu ">
       <div class="mobile-menu">
         <div class="mobile-menu__header">
           <p class="mobile-menu__logo">NewsExplorer</p>
@@ -127,8 +132,8 @@
           <a class="mobile-menu__link" href="./index.html">Главная</a>
           <a class="mobile-menu__link" href="./articles.html">Сохранённые статьи</a>
         </nav>
-        <button class="btn mobile-menu__btn mobile-menu__btn_hide">Авторизоваться</button>
-        <button class="btn mobile-menu__btn mobile-menu__btn-logout ">Грета<svg class="header__logout-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="btn mobile-menu__btn mobile-menu__btn-auth mobile-menu__btn">Авторизоваться</button>
+        <button class="btn mobile-menu__btn mobile-menu__btn-logout mobile-menu__btn_hide"><svg class="header__logout-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="#FFF"/>
           </svg>
         </button>
@@ -139,48 +144,6 @@
       <h2 class="results__heading">Результаты поиска</h2>
       <div class="articles-list">
 
-        <div class="article">
-          <button class="btn__save"></button>
-          <button class="btn__notice ">Войдите, чтобы сохранять статьи</button>
-          <a class="article__link" href="https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/" target="_blank">
-            <div class="article__image"></div>
-            <div class="article__container>">
-              <p class="article__date">2 августа, 2019</p>
-              <h3 class="article__heading">Национальное достояние – парки</h3>
-              <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            </div>
-            <p class="article__source">Лента.ру</p>
-          </a>
-        </div>
-
-        <div class="article">
-          <button class="btn__save btn__save_marked"></button> <!-- Чтобы установить кнопке статус "marked" добавить класс btn__save_marked -->
-          <button class="btn__notice ">Войдите, чтобы сохранять статьи</button>
-          <a class="article__link" href="https://nat-geo.ru/nature/lesnye-ogonki-istoriya-odnoj-fotografii/" target="_blank">
-            <div class="article__image"></div>
-            <div class="article__container>">
-              <p class="article__date">2 августа, 2019</p>
-              <h3 class="article__heading">Лесные огоньки: история одной фотографии</h3>
-              <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                из местных чудес природы.</p>
-            </div>
-            <p class="article__source">Медуза</p>
-          </a>
-        </div>
-
-        <div class="article">
-          <button class="btn__save btn__save_not-login"></button> <!-- Если пользователь не залогинен добавляется модификатор btn__save_not-login -->
-          <button class="btn__notice ">Войдите, чтобы сохранять статьи</button>
-          <a class="article__link" href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka/" target="_blank">
-            <div class="article__image"></div>
-            <div class="article__container>">
-              <p class="article__date">2 августа, 2019</p>
-              <h3 class="article__heading">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-              <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            </div>
-            <p class="article__source">Риа</p>
-          </a>
-        </div>
 
       </div>
       <button class="btn results__more-btn">Показать ещё</button>
@@ -214,6 +177,85 @@
         </div>
       </div>
     </footer>
+
+    <!-- <div class="template__signin template">
+      <div class="popup__container">
+        <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
+        <form class="form__signin" name="signin">
+          <h3 class="form__heading">Вход</h3>
+          <fieldset class="form__fieldset">
+            <div class="form__field">
+              <label class="form__label" for="signin__email">Email</label>
+              <input class="form__input" type="email" name="email" id="signin__email" pattern="[a-z0-9-_]+[@]{1}\w{2,}\.\w{2,}" placeholder="Введите почту" required />
+              <span class="form__error form__error_email">Неправильный формат email</span>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="signin__password">Пароль</label>
+              <input class="form__input" type="password" name="password" id="signin__password" placeholder="Введите пароль" required minlength="8"/>
+              <span class="form__error form__error_email">Ошибка пароля</span>
+            </div>
+            <span class="form__error form__error_server ">Ошибка с сервера</span>
+            <button class="btn form__btn" type="submit" disabled>Войти</button>
+          </fieldset>
+          <p class="form__reference">или <span class="form__link form__link-signup">Зарегистрироваться</span></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="template__signup template">
+      <div class="popup__container">
+        <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
+        <form class="form__signup" name="signin" action="http://httpbin.org/post" method="POST">
+          <h3 class="form__heading">Регистрация</h3>
+          <fieldset class="form__fieldset">
+            <div class="form__field">
+              <label class="form__label" for="signup__email">Email</label>
+              <input class="form__input" type="email" name="email" id="signup__email" pattern="[a-z0-9-_]+[@]{1}\w{2,}\.\w{2,}" placeholder="Введите почту" required />
+              <span class="form__error form__error_email ">Неправильный формат email</span>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="signup__password">Пароль</label>
+              <input class="form__input" type="password" name="password" id="signup__password" placeholder="Введите пароль" required minlength="8"/>
+              <span class="form__error form__error_email">Ошибка пароля</span>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="signup__name">Имя</label>
+              <input class="form__input" type="text" name="name" id="signup__name" placeholder="Введите своё имя" required minlength="8"/>
+              <span class="form__error form__error_name">Ошибка имени</span>
+            </div>
+            <span class="form__error form__error_server">Такой пользователь уже есть</span>
+            <button class="btn form__btn" type="submit" disabled>Зарегистрироваться</button>
+          </fieldset>
+          <p class="form__reference">или <span class="form__link form__link-signin">Войти</span></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="template__success template">
+      <div class="popup__container">
+        <img class="popup__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия формы">
+        <h3 class="popup__heading">Пользователь успешно зарегистрирован</h3>
+        <span class="form__link form__link-success">Выполнить вход</span>
+      </div>
+    </div> -->
+
+    <template class="template__article">
+      <div class="article">
+        <button class="article__icon"></button> <!-- Чтобы установить кнопке статус "marked" добавить класс btn__save_marked / btn__save_not-login  -->
+        <button class="btn__notice ">Войдите, чтобы сохранять статьи</button>
+        <button class="btn__keyword ">Keyword</button>
+        <a class="article__link" href="https://nat-geo.ru/nature/lesnye-ogonki-istoriya-odnoj-fotografii/" target="_blank">
+          <div class="article__image"></div>
+          <div class="article__container>">
+            <p class="article__date">2 августа, 2019</p>
+            <h3 class="article__heading">Лесные огоньки: история одной фотографии</h3>
+            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+              из местных чудес природы.</p>
+          </div>
+          <p class="article__source">Медуза</p>
+        </a>
+      </div>
+    </template>
 
   </main>
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
