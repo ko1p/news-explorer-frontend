@@ -1,3 +1,11 @@
-# игнорируем папки:
-/node_modules
-/dist
+# игнорируем:
+node_modules
+dist
+.vscode
+.history
+.npm
+*.log
+npm-debug.log*
+.env
+.DS_Store
+.idea

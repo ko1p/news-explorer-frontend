@@ -187,6 +187,7 @@ searchForm.addEventListener('submit', (event) => {
     })
     .then((cardsArray) => {
       resultsSection.classList.add('results_is-opened');
+      cardList.resetCounter();
       cardList.addCardList(cardsArray);
       if (cardsArray.length <= 3) {
         cardList.renderResults(cardsArray);
