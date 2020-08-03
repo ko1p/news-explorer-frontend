@@ -1,4 +1,4 @@
-# Дипломная работа (Leve2)
+# Дипломная работа (Leve3)
 ## NewsExplorer.Frontend
 
 ### Описание:
@@ -6,6 +6,8 @@
 Проект по поиску и сохранению избраных новостей.
 
 Ссылка: [NewsExplorer](https://ko1p.github.io/news-explorer-frontend/index.html "NewsExplorer")
+Ссылка: [newsapp.ga](https://newsapp.ga "NewsExplorer")
+Ссылка: [api.newsapp.ga](https://newsapp.ga "NewsExplorer")
 
 Текущая версия: v.0.0.1
 
