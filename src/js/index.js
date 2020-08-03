@@ -186,8 +186,22 @@ searchForm.addEventListener('submit', (event) => {
       return cardsArray;
     })
     .then((cardsArray) => {
+      mainApi.getArticles()
+        .then((res) => res.json())
+        .then((cards) => cards.data)
+        .then((cards) => {
+          cards.forEach((item) => {
+            cardsArray.forEach((card) => {
+              if (card.innerHTML.includes(`${item.link}`)) {
+                card.dataset._id = item._id;
+                card.querySelector('.btn__save').classList.add('btn__save_marked');
+              }
+            });
+          });
+        });
+      console.log(cardsArray);
+
       resultsSection.classList.add('results_is-opened');
-      cardList.resetCounter();
       cardList.addCardList(cardsArray);
       if (cardsArray.length <= 3) {
         cardList.renderResults(cardsArray);
@@ -197,9 +211,7 @@ searchForm.addEventListener('submit', (event) => {
         for (let i = firstCardIndex; i < RENDER_AT_A_TIME; i += 1) {
           cardList.addCard(cardsArray[i]);
         }
-        // cardList.showMore();
       }
-      // cardList.renderResults();
       return cardList;
     })
     .catch((err) => {

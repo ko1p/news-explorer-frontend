@@ -33,8 +33,6 @@ export default class NewsCardList {
   }
 
   showMore() {
-    console.log(this.sumOfCards, 'кол-во карточек');
-    console.log(this.numOfLastRenderedCard, 'последняя отрендеренная');
     if (this.sumOfCards > 3) {
       for (let i = this.numOfLastRenderedCard; i < this.numOfLastRenderedCard + 3; i += 1) {
         this.addCard(this.cards[i]);
@@ -47,6 +45,7 @@ export default class NewsCardList {
         i < (this.sumOfCards + this.numOfLastRenderedCard); i += 1) {
         this.addCard(this.cards[i]);
       }
+      this.numOfLastRenderedCard = RENDER_AT_A_TIME;
     }
   }
 
@@ -59,9 +58,4 @@ export default class NewsCardList {
     this.cards = cardsList;
     this.sumOfCards = cardsList.length - alreadyRenderedCards;
   }
-
-  resetCounter() {
-    this.numOfLastRenderedCard = RENDER_AT_A_TIME;
-  }
-
 }
