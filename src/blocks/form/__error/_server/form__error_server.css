@@ -1,0 +1,16 @@
+.form__error_server {
+  display: block;
+  width: 80%;
+  /* left: 125px; */
+  bottom: 135px;
+  position: absolute;
+  text-align: center;
+  align-self: center;
+}
+
+@media screen and (max-width: 767px) {
+	.form__error_server  {
+    left: 60px;
+    top: 270px;
+  }
+}

@@ -1,0 +1,37 @@
+@import url("./_active/results__more-btn_active.css");
+
+.results__more-btn {
+  display: none;
+  width: 288px;
+  height: 64px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin: 0 0 80px 0;
+  background-color: #FFF;
+  border: none;
+  border-radius: 80px;
+}
+
+.results__more-btn:hover {
+  opacity: .8;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.results__more-btn {
+    width: 240px;
+    height: 56px;
+    margin: 0 0 40px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.results__more-btn {
+    min-width: 288px;
+    height: 56px;
+    margin: 0 0 32px 0;
+  }
+}

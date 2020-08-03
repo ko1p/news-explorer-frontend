@@ -1,0 +1,15 @@
+@import url(./_is-opened/no-articles_is-opened.css);
+@import url(./__image/no-articles__image.css);
+@import url(./__heading/no-articles__heading.css);
+@import url(./__text/no-articles__text.css);
+@import url(./_center/no-articles_center.css);
+
+.no-articles {
+  display: none;
+  max-width: 1440px;
+  min-height: 374px;
+  width: 100%;
+  background-color: #f5f6f7;
+  flex-direction: column;
+  align-items: center;
+}

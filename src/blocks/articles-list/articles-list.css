@@ -1,0 +1,29 @@
+.articles-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 64px 104px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.articles-list {
+    margin: 32px 40px;
+    grid-gap: 8px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	.articles-list {
+    grid-template-columns: 1fr 1fr;
+    margin: 24px 16px;
+    grid-gap: 9px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+	.articles-list {
+    grid-template-columns: 1fr;
+    margin: 24px 16px;
+    grid-gap: 9px;
+  }
+}

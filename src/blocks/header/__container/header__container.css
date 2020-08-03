@@ -1,0 +1,22 @@
+@import url('./_white/header__container_white.css');
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 104px;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.header__container {
+    margin: auto 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.header__container {
+    margin: auto 16px;
+  }
+}

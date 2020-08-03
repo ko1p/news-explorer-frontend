@@ -1,0 +1,9 @@
+@import url(./_signin/form__link_signin.css);
+
+.form__link {
+  text-decoration: none;
+  color: #2F71E5;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+}

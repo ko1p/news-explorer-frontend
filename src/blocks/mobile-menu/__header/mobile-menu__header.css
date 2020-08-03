@@ -1,0 +1,8 @@
+.mobile-menu__header {
+  min-width: 320px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

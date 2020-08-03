@@ -1,0 +1,10 @@
+@import url(./_is-opened/preloader_is-opened.css);
+@import url(./__text/preloader__text.css);
+
+.preloader {
+  display: none;
+  max-width: 1440px;
+  min-height: 282px;
+  width: 100%;
+  background-color: #f5f6f7;
+}

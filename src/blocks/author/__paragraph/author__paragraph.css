@@ -1,0 +1,36 @@
+.author__paragraph {
+  margin: 24px 0 0 0;
+  max-width: 600px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.author__paragraph {
+    max-width: 424px;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 5px 0 0 0;
+  }
+
+  .author__paragraph:nth-last-of-type(1) {
+    margin: 22px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .author__paragraph {
+    width: 102%;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 5px 0 0 0;
+  }
+
+  .author__paragraph:nth-last-of-type(1) {
+    margin: 24px 0 0 0;
+  }
+}

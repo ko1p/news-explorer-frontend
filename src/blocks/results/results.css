@@ -1,0 +1,18 @@
+@import url(./_is-opened/results_is-opened.css);
+@import url(./__info/results__info.css);
+@import url(./__reference/results__reference.css);
+@import url(./__title/results__title.css);
+@import url(./__keywords/results__keywords.css);
+@import url(./__keyword/result__keyword.css);
+@import url(./__heading/results__heading.css);
+@import url(./__more-btn/results__more-btn.css);
+
+.results {
+  font-family: 'Roboto';
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  background-color: #F5F6F7;
+}

@@ -1,0 +1,21 @@
+@import url(./__mobile-menu/btn__mobile-menu.css);
+@import url(./__auth/btn__auth.css);
+@import url(./__logout/btn__logout.css);
+@import url(./__notice/btn__notice.css);
+@import url(./__save/btn__save.css);
+@import url(./_is-opened/btn_is-opened.css);
+@import url(./__keyword/btn__keyword.css);
+@import url(./__delete/btn__delete.css);
+
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.btn {
+    width: 152px;
+    height: 40px;
+  }
+}

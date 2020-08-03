@@ -1,0 +1,31 @@
+@import url('./__container/header__container.css');
+@import url('./_white/header_white.css');
+@import url('./__logo/header__logo.css');
+@import url('./__navigation/header__navigation.css');
+@import url('./__nav-logout/header__nav-logout.css');
+@import url('./__nav-link/header__nav-link.css');
+@import url('./__logout-image/header__logout-image.css');
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  height: 80px;
+  color: #FFF;
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.header {
+    height: 66px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header {
+    height: 56px;
+	}
+}

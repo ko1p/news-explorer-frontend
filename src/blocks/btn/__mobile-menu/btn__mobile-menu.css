@@ -1,0 +1,12 @@
+.btn__mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.btn__mobile-menu {
+    display: block;
+    margin: 3px 6px 0 0;
+    width: 24px;
+    height: 24px;
+  }
+}

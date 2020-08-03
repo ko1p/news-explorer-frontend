@@ -1,0 +1,22 @@
+.author__photo {
+  position: relative;
+  margin: 80px 56px 80px 104px;
+  width: 32.22%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.author__photo {
+    margin: 61px 32px 61px 40px;
+    width: 30.22%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.author__photo {
+    margin: 33px 24px 24px 24px;
+    width: 85%;
+  }
+}

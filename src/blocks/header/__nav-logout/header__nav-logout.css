@@ -1,0 +1,24 @@
+.header__nav-logout {
+  width: 112px;
+  height: 48px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border: 1px solid;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.header__nav-logout {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 16px;
+  }
+}

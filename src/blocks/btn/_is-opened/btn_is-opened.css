@@ -1,0 +1,5 @@
+@media screen and (min-width: 1260px) {
+	.btn_is-opened {
+    display: block;
+  }
+}

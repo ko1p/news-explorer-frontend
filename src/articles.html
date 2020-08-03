@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Поиск новостей по ключевым словам, проект NewsExplorer">
+  <meta name="keywords" content="Поиск новостей, NewsExplorer">
+  <meta name="author" content="Белько Антон">
+  <title>NewsExplorer</title>
+  <link rel="icon" href="<%=require('./images/icon.png').default%>" type="image/png">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css %>">
+</head>
+<body>
+  <main class="page">
+    <!-- Хедер -->
+    <header class="header">
+      <div class="header__container header__container_white">
+        <p class="header__logo">NewsExplorer</p>
+        <nav class="header__navigation">
+          <a class="header__nav-link" href="./index.html">Главная</a>
+          <a class="header__nav-link header__nav-link_active" href="./articles.html">Сохраненные статьи</a>
+          <button class="btn btn__auth header__nav-link header__nav-link_hide">Авторизоваться</button>
+          <button class="btn btn__logout header__nav-link header__nav-logout">null<svg class="header__logout-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="btn btn__mobile-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="16" height="2" fill="black"/>
+              <rect x="4" y="14" width="16" height="2" fill="black"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- Попап мобильное-меню -->
+    <div class="popup popup__mobile-menu ">
+      <div class="mobile-menu">
+        <div class="mobile-menu__header">
+          <p class="mobile-menu__logo">NewsExplorer</p>
+          <img class="mobile-menu__close" src="<%=require('./images/close.svg').default%>" alt="кнопка закрытия меню">
+        </div>
+        <nav class="mobile-menu__links">
+          <a class="mobile-menu__link" href="./index.html">Главная</a>
+          <a class="mobile-menu__link" href="./articles.html">Сохранённые статьи</a>
+        </nav>
+        <button class="btn mobile-menu__btn mobile-menu__btn-auth">Авторизоваться</button>
+        <button class="btn mobile-menu__btn mobile-menu__btn-logout mobile-menu__btn_hide">null<svg class="header__logout-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="#FFF"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Результаты поиска -->
+    <section class="results results_is-opened">
+      <div class="results__info">
+        <p class="results__reference">Сохранённые статьи</p>
+        <h2 class="results__title">У вас нет сохранённых статей</h2>
+        <p class="results__keywords"></p>
+      </div>
+      <div class="no-articles no-articles_center">
+        <img class="no-articles__image no-articles__image_center" src="<%=require('./images/not-found.svg').default%>" alt="ничего не найдено">
+        <h3 class="no-articles__heading">Ничего не найдено</h3>
+        <p class="no-articles__text">К сожалению по вашему запросу ничего не найдено.</p>
+      </div>
+      <div class="articles-list">
+
+      </div>
+      <button class="btn results__more-btn">Показать ещё</button>
+    </section>
+    <!-- Футер -->
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
+      <div class="footer__links">
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a class="footer__link" href="./index.html">Главная</a></li>
+          <li class="footer__nav-item"><a class="footer__link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a></li>
+        </ul>
+        <div class="footer__social">
+          <a class="footer__social-link" href="https://github.com/ko1p"><img src="<%=require('./images/github.svg').default%>" alt="иконка github"></a>
+          <a class="footer__social-link" href="https://www.facebook.com/anton.belko.5"><img src="<%=require('./images/fb.svg').default%>" alt="иконка facebook"></a>
+        </div>
+      </div>
+    </footer>
+
+    <template class="template__article">
+      <div class="article">
+        <button class="article__icon"></button>
+        <button class="btn__notice ">Убрать из сохраненных</button>
+        <button class="btn__keyword ">Keyword</button>
+        <a class="article__link" href="https://nat-geo.ru/nature/lesnye-ogonki-istoriya-odnoj-fotografii/" target="_blank">
+          <div class="article__image"></div>
+          <div class="article__container>">
+            <p class="article__date">2 августа, 2019</p>
+            <h3 class="article__heading">Лесные огоньки: история одной фотографии</h3>
+            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+              из местных чудес природы.</p>
+          </div>
+          <p class="article__source">Медуза</p>
+        </a>
+      </div>
+    </template>
+
+  </main>
+    <script src="<%= htmlWebpackPlugin.files.chunks.articles.entry %>"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.footer__social-link:hover {
+  opacity: .7;
+}
+
+.footer__social-link:nth-child(2) {
+  margin-left: 20px;
+}

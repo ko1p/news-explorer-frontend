@@ -1,0 +1,29 @@
+@import url(./__link/article__link.css);
+@import url(./__image/article__image.css);
+@import url(./__container/article__container.css);
+@import url(./__date/article__date.css);
+@import url(./__heading/article__heading.css);
+@import url(./__text/article__text.css);
+@import url(./__source/article__source.css);
+
+.article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 576px;
+  background-color: #FFF;
+  border-radius: 5%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.article {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.article {
+    height: 440px;
+  }
+}
