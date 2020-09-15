@@ -186,21 +186,22 @@ searchForm.addEventListener('submit', (event) => {
       return cardsArray;
     })
     .then((cardsArray) => {
-      mainApi.getArticles()
-        .then((res) => res.json())
-        .then((cards) => cards.data)
-        .then((cards) => {
-          cards.forEach((item) => {
-            cardsArray.forEach((card) => {
-              if (card.innerHTML.includes(`${item.link}`)) {
-                card.dataset._id = item._id;
-                card.querySelector('.btn__save').classList.add('btn__save_marked');
-              }
+
+      if (localStorage.token) {
+        mainApi.getArticles()
+          .then((res) => res.json())
+          .then((cards) => cards.data)
+          .then((cards) => {
+            cards.forEach((item) => {
+              cardsArray.forEach((card) => {
+                if (card.innerHTML.includes(`${item.link}`)) {
+                  card.dataset._id = item._id;
+                  card.querySelector('.btn__save').classList.add('btn__save_marked');
+                }
+              });
             });
           });
-        });
-      console.log(cardsArray);
-
+      }
       resultsSection.classList.add('results_is-opened');
       cardList.addCardList(cardsArray);
       if (cardsArray.length <= 3) {
