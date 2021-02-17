@@ -6,8 +6,7 @@
 Проект по поиску и сохранению избраных новостей.
 
 Frontend: [на github](https://ko1p.github.io/news-explorer-frontend/index.html "NewsExplorer") 
-/
-[newsexp.ml](https://ko1p.github.io/news-explorer-frontend/index.html "NewsExplorer")
+
 Backend: [api.newsapp.ga](https://newsapp.ga "NewsExplorer")
 
 Текущая версия: v.0.0.1
