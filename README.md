@@ -3,7 +3,7 @@
 
 ### Описание:
 
-Проект по поиску и сохранению избраных новостей
+Проект по поиску и сохранению избраных новостей.
 
 Frontend: [на github](https://ko1p.github.io/news-explorer-frontend/index.html "NewsExplorer") 
 
